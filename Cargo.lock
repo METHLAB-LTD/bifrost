@@ -239,6 +239,8 @@ dependencies = [
  "smallvec",
  "snowbridge-basic-channel",
  "snowbridge-dispatch",
+ "snowbridge-erc20-app",
+ "snowbridge-ethereum-light-client",
  "sp-api",
  "sp-arithmetic",
  "sp-block-builder",
@@ -919,8 +921,6 @@ dependencies = [
  "polkadot-primitives",
  "scale-info",
  "smallvec",
- "snowbridge-basic-channel",
- "snowbridge-dispatch",
  "sp-api",
  "sp-arithmetic",
  "sp-block-builder",
@@ -9830,6 +9830,57 @@ dependencies = [
  "parity-scale-codec",
  "scale-info",
  "serde",
+ "sp-core",
+ "sp-io",
+ "sp-keyring",
+ "sp-runtime",
+ "sp-std",
+]
+
+[[package]]
+name = "snowbridge-erc20-app"
+version = "0.1.1"
+dependencies = [
+ "ethabi-decode",
+ "ethereum-bridge-primitives",
+ "frame-benchmarking",
+ "frame-support",
+ "frame-system",
+ "hex-literal 0.3.3",
+ "node-primitives",
+ "orml-currencies",
+ "orml-tokens 0.4.1-dev (git+https://github.com/open-web3-stack/open-runtime-module-library?rev=5ba42f532b72d71a28aaa18421855de003b9ca71)",
+ "orml-traits 0.4.1-dev (git+https://github.com/open-web3-stack/open-runtime-module-library?rev=5ba42f532b72d71a28aaa18421855de003b9ca71)",
+ "pallet-balances",
+ "parity-scale-codec",
+ "rlp",
+ "rustc-hex",
+ "scale-info",
+ "serde",
+ "snowbridge-dispatch",
+ "sp-core",
+ "sp-io",
+ "sp-keyring",
+ "sp-runtime",
+ "sp-std",
+]
+
+[[package]]
+name = "snowbridge-ethereum-light-client"
+version = "0.1.1"
+dependencies = [
+ "ethash",
+ "ethereum-bridge-primitives",
+ "frame-benchmarking",
+ "frame-support",
+ "frame-system",
+ "hex-literal 0.3.3",
+ "parity-scale-codec",
+ "rlp",
+ "rustc-hex",
+ "scale-info",
+ "serde",
+ "serde_json",
  "sp-core",
  "sp-io",
  "sp-keyring",

@@ -110,9 +110,6 @@ orml-xcm-support = { version = "0.4.1-dev", default-features = false }
 zenlink-protocol = { version = "*", default-features = false }
 zenlink-protocol-runtime-api = { version = "*", default-features = false }
 
-snowbridge-basic-channel = { default-features = false, path = "../../ethereum-bridge/basic-channel" }
-snowbridge-dispatch = { default-features = false, path = "../../ethereum-bridge/dispatch" }
-
 
 [build-dependencies]
 substrate-wasm-builder = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.12" }
@@ -191,9 +188,6 @@ std = [
 	"zenlink-protocol/std",
 	"zenlink-protocol-runtime-api/std",
 	"xcm-support/std",
-	"ethereum-bridge-primitives/std",
-	"snowbridge-basic-channel/std",
-	"snowbridge-dispatch/std",
 ]
 with-tracing = ["frame-executive/with-tracing"]
 

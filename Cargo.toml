@@ -26,6 +26,8 @@ members = [
 	"ethereum-bridge/primitives",
 	"ethereum-bridge/basic-channel",
 	"ethereum-bridge/dispatch",
+	"ethereum-bridge/ethereum-light-client",
+	"ethereum-bridge/erc20-app"
 ]
 
 resolver = "2"

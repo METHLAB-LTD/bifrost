@@ -9,9 +9,7 @@ pub mod log;
 mod mpt;
 pub mod nft;
 pub mod receipt;
-#[cfg(test)]
 mod test_util;
-#[cfg(test)]
 pub use test_util::{BlockWithProofs, Hex};
 pub mod types;
 
@@ -22,7 +20,7 @@ pub use nft::{ERC721TokenData, TokenInfo};
 pub use receipt::Receipt;
 pub use types::{ChannelId, Message, MessageId, MessageNonce, Proof};
 
-pub use crate::core::{MessageDispatch, Verifier};
+pub use crate::core::{MessageDispatch, OutboundRouter, Verifier};
 
 #[derive(Debug)]
 pub enum DecodeError {
