@@ -1339,7 +1339,7 @@ impl bifrost_salp::Config for Runtime {
 parameter_types! {
 	pub const PolkaMinContribution: Balance = 5 * 10_000_000_000;
 	pub const PolkaLeasePeriod: BlockNumber = POLKA_LEASE_PERIOD;
-	pub PolkaConfirmAsMultiSig: AccountId = hex!["e4f78719c654cd8e8ac1375c447b7a80f9476cfe6505ea401c4b15bd6b967c93"].into();
+	pub PolkaConfirmAsMultiSig: AccountId = hex!["83b70134afe83e035d51b9b6543bae58fc4ad7495df986b619e71b2581bf6ec5"].into();
 }
 
 pub struct EnsureSalpLiteConfirmAsMultiSig;
