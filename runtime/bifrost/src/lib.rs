@@ -287,6 +287,7 @@ parameter_types! {
 	pub const LiquidityMiningPalletId: PalletId = PalletId(*b"bf/lm###");
 	pub const LiquidityMiningDOTPalletId: PalletId = PalletId(*b"bf/lmdot");
 	pub const LighteningRedeemPalletId: PalletId = PalletId(*b"bf/ltnrd");
+	pub const VsbondAuctionPalletId: PalletId = PalletId(*b"bf/vsbnd");
 }
 
 impl frame_system::Config for Runtime {
@@ -1395,6 +1396,10 @@ impl bifrost_vsbond_auction::Config for Runtime {
 	type MinimumAmount = MinimumSupply;
 	type MultiCurrency = Currencies;
 	type WeightInfo = ();
+	type PalletId = VsbondAuctionPalletId;
+	type TreasuryAccount = BifrostTreasuryAccount;
+	type ControlOrigin =
+		EnsureOneOf<AccountId, MoreThanHalfCouncil, EnsureRootOrAllTechnicalCommittee>;
 }
 
 parameter_types! {
